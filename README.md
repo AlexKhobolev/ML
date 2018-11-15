@@ -39,6 +39,7 @@ ONN <- function(xl, z)
 
 Код программы:
 
+```html
 kNN <- function(xl, z, k)
 {
   orderedXl <- sortObjectsByDist(xl, z)
@@ -49,7 +50,7 @@ kNN <- function(xl, z, k)
   class <- names(which.max(counts))
   return (class)
 }
-
+```
 
 
 #Описание алгоритма kwNN
