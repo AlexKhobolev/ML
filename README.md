@@ -26,7 +26,7 @@ ONN <- function(xl, z)
   return (class)
 }
 ```
-
+![Иллюстрация к проекту](https://github.com/AlexKhobolev/ML/issues/1#issue-381968857)
 
 
 Описание алгоритма kNN
