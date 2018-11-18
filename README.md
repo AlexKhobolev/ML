@@ -26,7 +26,7 @@ ONN <- function(xl, z)
   return (class)
 }
 ```
-![alt tag](http://url/to/onn.png)
+
 
 
 Описание алгоритма kNN
