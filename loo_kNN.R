@@ -38,7 +38,7 @@ knn <- function(xl, z, k)
 }
 
 class <- iris[, 5]
-xl <- iris[1:20, 3:5]
+xl <- iris[, 3:5]
 
 
 plot(NULL, NULL, type = "l", xlim = c(0, 150), ylim = c(0, 1), xlab = 'k', ylab = 'LOO')
@@ -52,7 +52,7 @@ for(k in Ox) {
   l <- dim(xl)[1]
   R <- 0
   for(i in 1:l) {
-    irisNew <- iris[-i, 3:4]
+    irisNew <- iris[-i, 3:5]
     z <- iris[i, 3:4]
     if(knn(irisNew, z, k) != iris[i, 5]) {
       R <- R + 1
