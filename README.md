@@ -35,7 +35,7 @@ ONN <- function(xl, z)
   return (class)
 }
 ```
-![Иллюстрация к проекту](https://github.com/AlexKhobolev/ML/issues/1#issue-381968857)
+![onn](https://user-images.githubusercontent.com/44859059/48857418-defafc00-edc9-11e8-9d8d-1dc2b1603ebb.png)
 
 
 **Описание алгоритма kNN**
