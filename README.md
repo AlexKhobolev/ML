@@ -153,7 +153,7 @@ for(k in Ox) {
   l <- dim(xl)[1]
   R <- 0
   for(i in 1:l) {
-    irisNew <- iris[-i, 3:4]
+    irisNew <- iris[-i, 3:5]
     z <- iris[i, 3:4]
     if(knn(irisNew, z, k) != iris[i, 5]) {
       R <- R + 1
