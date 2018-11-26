@@ -27,7 +27,7 @@ kernelQ = function(r)
 
 kernelG = function(r)
 {
-  return (((2*pi)^(-1/2)) * exp(-1/2*abs(r)^2) * (abs(r) <= 1))
+  return (((2*pi)^(-1/2)) * exp(-1/2*r^2))
 }
 
 ## Сортируем объекты согласно расстояния до объекта z
