@@ -18,10 +18,10 @@ sortObjectsByDist <- function(xl, z, metricFunction =
   {
     distances[i, ] <- c(i, metricFunction(xl[i, 1:n], z))
   }
-  print(distances)
+  ##print(distances)
   ## Сортируем
   orderedXl <- xl[order(distances[, 2]), ]
-  print(orderedXl)
+  ##print(orderedXl)
   return (orderedXl);
 }
 
@@ -36,11 +36,13 @@ dstFunc <- function(xl, z, metricFunction =
     distances[i, ] <- c(i, metricFunction(xl[i, 1:n], z))
   }
   dstnc <- c()
-  
-    dstnc <- order(distances)
-  
+    dsst <- distances[, 2]
+    ##print(dsst)
+    dstnc <- order(dsst)
+  ##print(dstnc)
  
-    ddsstt <- distances[dstnc]
+    ddsstt <- distances[dstnc, 2]
+    print(ddsstt)
   
   return(ddsstt);
 }
@@ -55,7 +57,11 @@ pw <- function(xl, z, k, h)
   n <- dim(orderedXl)[2] - 1
   
   for(i in 1:k){
-    orderedXl[i, 4] <- ddsstt[i]/h
+    orderedXl[i, 4] <- 0.5*ddsstt[i]/h
+    # orderedXl[i, 4] <- 1-ddsstt[i]/h
+    # orderedXl[i, 4] <- (15/16)*(1-(ddsstt[i]/h)^2)^2
+    # orderedXl[i, 4] <- (3/4)*(1-(ddsstt[i]/h)^2)
+    # orderedXl[i, 4] <- ddsstt[i]/h
   }
   print(orderedXl)
   types <- c("setosa", "versicolor", "virginica")
@@ -86,7 +92,7 @@ plot(iris[, 3:4], pch = 21, bg = colors[iris$Species], col =
        colors[iris$Species], asp = 1)
 
 ## Классификация одного заданного объекта
-z <- c(4.4, 2)
+z <- c(5, 2.5)
 xl <- iris[, 3:5]
-class <- pw(xl, z, k=4, h=0.5)
+class <- pw(xl, z, k=4, h=1)
 points(z[1], z[2], pch = 22, bg = colors[class], asp = 1)
