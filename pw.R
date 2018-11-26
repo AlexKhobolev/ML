@@ -4,6 +4,32 @@ euclideanDistance <- function(u, v)
   sqrt(sum((u - v)^2))
 }
 
+##Функции ядра
+kernelEP = function(r)
+{
+  return ((3/4*(1-abs(r)^2)*(abs(r)<=1)))
+}
+
+kernelR = function(r)
+{
+  return ((0.5*abs(r))* (abs(r) <= 1))    
+}
+
+kernelT = function(r)
+{
+  return ((1 - abs(r)) * (abs(r) <= 1))
+}
+
+kernelQ = function(r)
+{
+  return ((15 / 16) * (1 - abs(r) ^ 2) ^ 2 * (abs(r) <= 1))
+}
+
+kernelG = function(r)
+{
+  return (((2*pi)^(-1/2)) * exp(-1/2*abs(r)^2) * (abs(r) <= 1))
+}
+
 ## Сортируем объекты согласно расстояния до объекта z
 
 sortObjectsByDist <- function(xl, z, metricFunction =
@@ -57,11 +83,7 @@ pw <- function(xl, z, k, h)
   n <- dim(orderedXl)[2] - 1
   
   for(i in 1:k){
-    orderedXl[i, 4] <- 0.5*ddsstt[i]/h
-    # orderedXl[i, 4] <- 1-ddsstt[i]/h
-    # orderedXl[i, 4] <- (15/16)*(1-(ddsstt[i]/h)^2)^2
-    # orderedXl[i, 4] <- (3/4)*(1-(ddsstt[i]/h)^2)
-    # orderedXl[i, 4] <- ddsstt[i]/h
+    orderedXl[i, 4] <- kernelG(ddsstt[i]/h)
   }
   print(orderedXl)
   types <- c("setosa", "versicolor", "virginica")
