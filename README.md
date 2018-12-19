@@ -236,7 +236,7 @@ kernelEP = function(r)
 
 **Линии уровня нормального распределения**
 
-N-мерным нормальным распределением будет называться распределение с плотностью ![linesform](https://user-images.githubusercontent.com/44859059/50251637-90a34200-03f5-11e9-8c17-2fc8cf8fcb9b.png). 
+N-мерным нормальным распределением будет называться распределение с плотностью ![linesform](https://user-images.githubusercontent.com/44859059/50251637-90a34200-03f5-11e9-8c17-2fc8cf8fcb9b.png)с математическим ожиданием (мю) и матрицей ковариации (сигма). 
 
 Рассмотрим следующие случаи:
 
@@ -259,6 +259,16 @@ N-мерным нормальным распределением будет на
 Пример:
 
 ![lines4](https://user-images.githubusercontent.com/44859059/50252279-83875280-03f7-11e9-8884-dd2555ee467d.png)
+
+**Подстановочный алгоритм plug-in**
+
+![pluginokr](https://user-images.githubusercontent.com/44859059/50253590-b895a400-03fb-11e9-9f33-07219059d974.png)
+
+![plugin2](https://user-images.githubusercontent.com/44859059/50253605-c519fc80-03fb-11e9-9eec-d476a3be6585.png)
+
+![plugin3](https://user-images.githubusercontent.com/44859059/50253627-d400af00-03fb-11e9-8914-a98f0870369f.png)
+
+![plugin4](https://user-images.githubusercontent.com/44859059/50253639-dfec7100-03fb-11e9-99ef-6254abed9a47.png)
 
 **Наивный нормальный байесовский классификатор**
 
