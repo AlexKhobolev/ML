@@ -201,6 +201,7 @@ if(mat[1,1] == 0 & mat[1,2] == 0 & mat[1,3] == 0){
 ![pw_map](https://user-images.githubusercontent.com/44859059/49109338-7e713080-f29b-11e8-8468-5ab70f77f3ab.png)
 
 
+![loopw](https://user-images.githubusercontent.com/44859059/50244640-837c5800-03e1-11e9-91e9-aff25ad3c53b.png)
 
 
 **Метод потенциальных функций**
