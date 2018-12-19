@@ -246,4 +246,5 @@ N=1/sqrt(2*pi)/sigm[i,j]*exp(-1/2*(x[j]-mu[i,j])^2/sigm[i,j]^2)
 4) Определяем объект таким классом, эмпирическая оценка которого наибольшая.
 
 Карта классификации:
+
 ![nnbk](https://user-images.githubusercontent.com/44859059/50241993-1618f900-03da-11e9-88ac-9bc6ef3fffe8.png)
