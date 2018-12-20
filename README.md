@@ -317,9 +317,47 @@ xy2 <- mvrnorm(n=ObjectsCountOfEachClass, Mu2, Sigma2)
 ```
 
 2) Соединяем два класса в одну выборку;
+
+```html
+xl <- rbind(cbind(xy1, 1), cbind(xy2, 2))
+```
+
 3) Восстанавливаем центр нормального распределения;
+
+```html
+estimateMu <- function(objects)
+{
+  ## mu = 1 / m * sum_{i=1}^m(objects_i)
+  rows <- dim(objects)[1]
+  cols <- dim(objects)[2]
+  mu <- matrix(NA, 1, cols)
+  for (col in 1:cols)
+  {
+    mu[1, col] = mean(objects[,col])
+  }
+  return(mu)
+}
+```
+
 4) Восстанавливаем ковариационные матрицы;
-5) Получаем коэффициенты подстановочного алгоритма для построения разделяющей кривой.
+
+```html
+estimateCovarianceMatrix <- function(objects, mu)
+{
+  rows <- dim(objects)[1]
+  cols <- dim(objects)[2]
+  sigma <- matrix(0, cols, cols)
+  for (i in 1:rows)
+  {
+    sigma <- sigma + (t(objects[i,] - mu) %*% (objects[i,] - mu)) / (rows - 1)
+  }
+  return (sigma)
+}
+```
+
+5) Получаем коэффициенты подстановочного алгоритма для построения разделяющей кривой имеющей вид:
+
+a*x1^2 + b*x1*x2 + c*x2 + d*x1 + e*x2 + f = 0
 
 Если будем выбирать различные центры и ковариационные матрицы, будем получать разные виды дискриминантной функции.
 
