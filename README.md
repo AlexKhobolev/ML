@@ -260,15 +260,6 @@ N-мерным нормальным распределением будет на
 
 ![lines4](https://user-images.githubusercontent.com/44859059/50252279-83875280-03f7-11e9-8884-dd2555ee467d.png)
 
-**Подстановочный алгоритм plug-in**
-
-![pluginokr](https://user-images.githubusercontent.com/44859059/50253590-b895a400-03fb-11e9-9f33-07219059d974.png)
-
-![plugin2](https://user-images.githubusercontent.com/44859059/50253605-c519fc80-03fb-11e9-9eec-d476a3be6585.png)
-
-![plugin3](https://user-images.githubusercontent.com/44859059/50253627-d400af00-03fb-11e9-8914-a98f0870369f.png)
-
-![plugin4](https://user-images.githubusercontent.com/44859059/50253639-dfec7100-03fb-11e9-99ef-6254abed9a47.png)
 
 **Наивный нормальный байесовский классификатор**
 
@@ -305,3 +296,20 @@ N=1/sqrt(2*pi)/sigm[i,j]*exp(-1/2*(x[j]-mu[i,j])^2/sigm[i,j]^2)
 Карта классификации:
 
 ![nnbk](https://user-images.githubusercontent.com/44859059/50241993-1618f900-03da-11e9-88ac-9bc6ef3fffe8.png)
+
+**Подстановочный алгоритм plug-in**
+
+Это один из вариантов байесовского классификатора, который обладает нормальным многомерным распределением. В алгоритме plug-in, восстанавливая параметры нормального распределения для каждого класса, подставляем в формулу оптимального байесовского классификатора восстановленные плотности.
+
+В случае, когда ковариационные матрицы равны для всех классов, получится Линейный Дискриминант Фишера.
+
+Если будем выбирать различные центры и ковариационные матрицы, будем получать разные виды дискриминантной функции.
+
+![pluginokr](https://user-images.githubusercontent.com/44859059/50253590-b895a400-03fb-11e9-9f33-07219059d974.png)
+
+![plugin2](https://user-images.githubusercontent.com/44859059/50253605-c519fc80-03fb-11e9-9eec-d476a3be6585.png)
+
+![plugin3](https://user-images.githubusercontent.com/44859059/50253627-d400af00-03fb-11e9-8914-a98f0870369f.png)
+
+![plugin4](https://user-images.githubusercontent.com/44859059/50253639-dfec7100-03fb-11e9-99ef-6254abed9a47.png)
+
