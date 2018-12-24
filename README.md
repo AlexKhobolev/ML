@@ -387,6 +387,62 @@ a*x1^2 + b*x1*x2 + c*x2 + d*x1 + e*x2 + f = 0
 
 ## Линейный дискриминант Фишера
 
+Линейный дискриминант Фишера отличается от подстановочного алгоритма тем, что ковариационные матрицы в Линейном дискриминате Фишера равны. И для их восстановления нужно использовать все объекты всех классов обучающей выборки.
+
+Шаги алгоритма:
+
+1) Генерируем тестовые данные с одинаковыми ковариационными матрицами
+
+```html
+Sigma1 <- matrix(c(5, 0, 0, 5), 2, 2)
+Sigma2 <- matrix(c(5, 0, 0, 5), 2, 2)
+Mu1 <- c(0, 0)
+Mu2 <- c(16, 0)
+xy1 <- mvrnorm(n=ObjectsCountOfEachClass, Mu1, Sigma1)
+xy2 <- mvrnorm(n=ObjectsCountOfEachClass, Mu2, Sigma2)
+```
+
+2) Соединяем два класса в одну выборку
+
+3) Восстанавливаем ковариационные матрицы
+
+```html
+for (i in 1:rows1)
+  {
+    sigma <- sigma + (t(objects1[i,] - mu1) %*%
+                        (objects1[i,] - mu1)) / (rows + 2)
+  }
+  for (i in 1:rows2)
+  {
+    sigma <- sigma + (t(objects2[i,] - mu2) %*%
+                        (objects2[i,] - mu2)) / (rows + 2)
+  }
+```
+
+4) Получаем коэффициенты разделяющей прямой по формуле
+
+![default](https://user-images.githubusercontent.com/44859059/50403018-5e566380-07ac-11e9-914d-e20d49fb8d73.png)
+
+```html
+inverseSigma <- solve(Sigma)
+alpha <- inverseSigma %*% t(mu1 - mu2)
+mu_st <- (mu1 + mu2) / 2
+beta <- mu_st %*% alpha
+```
+
+5) Рисуем прямую
+
+```html
+abline(beta / alpha[2,1], -alpha[1,1]/alpha[2,1], col = "red", lwd = 3)
+```
+
+Результаты работы алгоритма:
+
+![ldf](https://user-images.githubusercontent.com/44859059/50403029-78904180-07ac-11e9-8229-24994095b0cf.png)
+
+![ldf2](https://user-images.githubusercontent.com/44859059/50403035-834ad680-07ac-11e9-8ecc-3de836802bc2.png)
+
+
 ## Линейные алгоритмы классификации
 
 
