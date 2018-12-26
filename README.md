@@ -508,6 +508,10 @@ abline(beta / alpha[2,1], -alpha[1,1]/alpha[2,1], col = "red", lwd = 3)
 
 ## Персептрон Розенблатта 
 
+Основан на правиле Хэбба, которое гласит: если ![1](https://user-images.githubusercontent.com/44859059/50455417-f72ce080-095e-11e9-9b72-b9fabb728103.png) то ![2](https://user-images.githubusercontent.com/44859059/50455469-2b080600-095f-11e9-88a8-366538be12cb.png)
+
 ## Логистическая регрессия
+
+
 
 [Вверх](#Machine-Learning)
