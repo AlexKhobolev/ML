@@ -446,5 +446,4 @@ abline(beta / alpha[2,1], -alpha[1,1]/alpha[2,1], col = "red", lwd = 3)
 ## Линейные алгоритмы классификации
 
 
-
 [Вверх](#Machine-Learning)
