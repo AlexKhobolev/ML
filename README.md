@@ -440,7 +440,7 @@ abline(beta / alpha[2,1], -alpha[1,1]/alpha[2,1], col = "red", lwd = 3)
 
 ![ldf](https://user-images.githubusercontent.com/44859059/50403029-78904180-07ac-11e9-8229-24994095b0cf.png)
 
-![ldf2](https://user-images.githubusercontent.com/44859059/50403035-834ad680-07ac-11e9-8ecc-3de836802bc2.png)
+![ldf3](https://user-images.githubusercontent.com/44859059/50447918-7c989c80-092f-11e9-9624-e02b4e9db79c.png)
 
 
 ## Линейные алгоритмы классификации
