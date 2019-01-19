@@ -510,11 +510,20 @@ abline(beta / alpha[2,1], -alpha[1,1]/alpha[2,1], col = "red", lwd = 3)
 
 В линейном классификаторе ADALINE в качестве функции потерь берется квадратичная функция ![1](https://user-images.githubusercontent.com/44859059/50454742-8f749680-095a-11e9-8521-612953a7b0a9.png). Возьмем производную по переменной *w* и получим правило обновления весов на каждом шаге, которое будет выглядеть следующим образом: ![2](https://user-images.githubusercontent.com/44859059/50455022-68b75f80-095c-11e9-9e51-1c30b43ecdd4.png)
 
+Пример работы ADALINE: 
+
+![adaline](https://user-images.githubusercontent.com/44859059/51426428-c5c0d100-1bfb-11e9-9808-77a8229befe0.png)
+
+
 ## Персептрон Розенблатта 
 
 В Персептроне Розенблатта используется кусочно-линейная функция потерь: ![perc1](https://user-images.githubusercontent.com/44859059/51425764-580fa780-1bf1-11e9-8842-557d5416abb3.png).
 
 Алгоритм основан на правиле Хэбба, которое гласит: если ![1](https://user-images.githubusercontent.com/44859059/50455417-f72ce080-095e-11e9-9b72-b9fabb728103.png) то ![2](https://user-images.githubusercontent.com/44859059/50455469-2b080600-095f-11e9-88a8-366538be12cb.png) Это новое правило обновления весов.
+
+Пример работы Персептрона Розенблатта: 
+
+![perceptron](https://user-images.githubusercontent.com/44859059/51426435-e2f59f80-1bfb-11e9-8c1b-b8115ef6eab8.png)
 
 ## Логистическая регрессия
 
@@ -522,5 +531,12 @@ abline(beta / alpha[2,1], -alpha[1,1]/alpha[2,1], col = "red", lwd = 3)
 
 Правило обновления весов для логистической регрессии - ![log2](https://user-images.githubusercontent.com/44859059/51425821-4bd81a00-1bf2-11e9-8a14-2b2dafc02e99.png). Где сигмоидная функция такова: ![log3](https://user-images.githubusercontent.com/44859059/51425846-9b1e4a80-1bf2-11e9-9049-1bece04b1cfc.png)
 
+Пример работы логистической регрессии:
+
+![logreg](https://user-images.githubusercontent.com/44859059/51426440-fb65ba00-1bfb-11e9-9422-b915b860c68c.png)
+
+Сравнение работы всех трёх алгоритмов:
+
+![allline](https://user-images.githubusercontent.com/44859059/51426449-189a8880-1bfc-11e9-9b00-f9f4bc31bba8.png)
 
 [Вверх](#Machine-Learning)
