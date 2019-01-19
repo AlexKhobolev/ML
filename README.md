@@ -514,10 +514,13 @@ abline(beta / alpha[2,1], -alpha[1,1]/alpha[2,1], col = "red", lwd = 3)
 
 В Персептроне Розенблатта используется кусочно-линейная функция потерь: ![perc1](https://user-images.githubusercontent.com/44859059/51425764-580fa780-1bf1-11e9-8842-557d5416abb3.png).
 
-Алгоритм основан на правиле Хэбба, которое гласит: если ![1](https://user-images.githubusercontent.com/44859059/50455417-f72ce080-095e-11e9-9b72-b9fabb728103.png) то ![2](https://user-images.githubusercontent.com/44859059/50455469-2b080600-095f-11e9-88a8-366538be12cb.png)
+Алгоритм основан на правиле Хэбба, которое гласит: если ![1](https://user-images.githubusercontent.com/44859059/50455417-f72ce080-095e-11e9-9b72-b9fabb728103.png) то ![2](https://user-images.githubusercontent.com/44859059/50455469-2b080600-095f-11e9-88a8-366538be12cb.png) Это новое правило обновления весов.
 
 ## Логистическая регрессия
 
+Здесь используется логистическая функция потерь - ![log1](https://user-images.githubusercontent.com/44859059/51425799-e8e68300-1bf1-11e9-83d8-5e4006bb419e.png). 
+
+Правило обновления весов для логистической регрессии - ![log2](https://user-images.githubusercontent.com/44859059/51425821-4bd81a00-1bf2-11e9-8a14-2b2dafc02e99.png). Где сигмоидная функция такова: ![log3](https://user-images.githubusercontent.com/44859059/51425846-9b1e4a80-1bf2-11e9-9049-1bece04b1cfc.png)
 
 
 [Вверх](#Machine-Learning)
