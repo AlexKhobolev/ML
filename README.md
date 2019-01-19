@@ -535,7 +535,7 @@ abline(beta / alpha[2,1], -alpha[1,1]/alpha[2,1], col = "red", lwd = 3)
 
 ![logreg](https://user-images.githubusercontent.com/44859059/51426440-fb65ba00-1bfb-11e9-9422-b915b860c68c.png)
 
-Сравнение работы всех трёх алгоритмов:
+Сравнение работы всех трёх алгоритмов, где синий - ADALINE, зеленый - Персептрон Розенблатта (правило Хэбба), красный - логистичекая регрессия:
 
 ![allline](https://user-images.githubusercontent.com/44859059/51426449-189a8880-1bfc-11e9-9b00-f9f4bc31bba8.png)
 
